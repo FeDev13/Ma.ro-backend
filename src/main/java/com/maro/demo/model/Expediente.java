@@ -17,5 +17,7 @@ public class Expediente {
     private String materia;
     @Column
     private String estado;
+    @Column
+    private String comentario;
 
 }

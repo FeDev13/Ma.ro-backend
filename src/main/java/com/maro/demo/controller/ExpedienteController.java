@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/expediente")
+@CrossOrigin(origins = {"http://localhost:4200", "http://localhost:8080" })
 
 public class ExpedienteController {
     @Autowired
@@ -24,7 +25,7 @@ public class ExpedienteController {
     public Expediente updateFile(@RequestBody Expediente file){
         return this.expedienteService.updateFile(file);
     }
-    @PostMapping(value="/{id}")
+    @DeleteMapping(value="/{id}")
     public Boolean deleteFile(@PathVariable(value = "id") Long id){
         return this.expedienteService.deleteFile(id);
     }

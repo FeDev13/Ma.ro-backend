@@ -30,6 +30,8 @@ public class ExpedienteServiceImpl implements ExpedienteService{
             expedienteEncontrado.get().setActor(file.getActor());
             expedienteEncontrado.get().setDemandado(file.getDemandado());
             expedienteEncontrado.get().setEstado(file.getEstado());
+            expedienteEncontrado.get().setMateria(file.getMateria());
+            expedienteEncontrado.get().setComentario(file.getComentario());
             return this.newFile(expedienteEncontrado.get());
         }
         return null;
@@ -40,4 +42,6 @@ public class ExpedienteServiceImpl implements ExpedienteService{
          this.expedienteRepository.deleteById(idExpediente);
          return true;
     }
+
+
 }
